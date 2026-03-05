@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  bmw-web:
+    build: .
+    container_name: bmw-x3-container
+    ports:
+      - "8081:80"
+    restart: always

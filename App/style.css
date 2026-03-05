@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100vh;
+  background: #111;
+  padding: 80px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: 0.3s ease;
+}
+
+.mobile-menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(to right, #3e6f95 45%, rgba(0,0,0,0.3)),
+    url('https://images.unsplash.com/photo-1619767886558-efdc259cde1a?auto=format&fit=crop&w=1600&q=80')
+    no-repeat center/cover;
+  display: flex;
+  align-items: center;
+  padding: 0 80px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 120px;
+}
+
+.btn {
+  margin-top: 25px;
+  padding: 15px 35px;
+  background: #1c69d4;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.call-btn {
+  position: absolute;
+  bottom: 40px;
+  right: 40px;
+  width: 65px;
+  height: 65px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  cursor: pointer;
+}
