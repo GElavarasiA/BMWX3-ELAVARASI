@@ -7,23 +7,16 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/riyamaruthachalam54-web/BMW-X3.git'
-            }
-        }
-
         stage('Build') {
             steps {
-                bat'docker-compose build'
+                sh 'docker-compose build'
             }
         }
 
         stage('Deploy') {
             steps {
-                bat 'docker-compose down || true'
-                bat 'docker-compose up -d'
+                sh 'docker-compose down || true'
+                sh 'docker-compose up -d'
             }
         }
     }
